@@ -7,4 +7,6 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://FaYeest.github.io',
   integrations: [react(), tailwind()],
+  base: '/',
+  trailingSlash: "always"
 });
