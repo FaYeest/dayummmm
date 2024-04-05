@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://FaYeest.github.io',
-  base: '/dayummmm',
+  base: '/dayummmm/src',
   integrations: [react(), tailwind()],
 });
