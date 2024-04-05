@@ -1,0 +1,76 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+const name = "M. Tubagus Farrasandi";
+---
+
+<MainLayout
+  title={name}
+  seoTitle={name}
+  seoDesc="I'm a Software Engineer who expertise in AstroJS, Python, Java, and C++"
+>
+  <div class="flex flex-col justify-center items-center h-screen">
+    <div class="w-10/12 md:w-8/12 lg:w-6/12 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-16 md:mt-24 lg:mt-32">
+        Hello 👋, I am {name}
+      </h1>
+      <p id="typed" class="text-lg md:text-xl mt-6"></p>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .typing-animation::after {
+    content: "|";
+    animation: blink-caret 0.75s infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { opacity: 0 }
+    50% { opacity: 1 }
+  }
+</style>
+
+<script>
+  const phrases = [
+    "I am a <strong>Software Engineer</strong>",
+    "I <em>work</em> with Astro, Python, React, Java, and C++."
+  ];
+
+  let index = 0;
+  const typedElement = document.getElementById("typed");
+
+  function typePhrase() {
+    const currentPhrase = phrases[index];
+    let i = 0;
+    const typeInterval = setInterval(() => {
+      if (i <= currentPhrase.length) {
+        typedElement.innerHTML = currentPhrase.substring(0, i) + "<span class='typing-animation'></span>";
+        i++;
+      } else {
+        clearInterval(typeInterval);
+        setTimeout(erasePhrase, 1500);
+      }
+    }, 50);
+  }
+
+  function erasePhrase() {
+    let i = phrases[index].length;
+    const eraseInterval = setInterval(() => {
+      if (i >= 0) {
+        typedElement.innerHTML = phrases[index].substring(0, i) + "<span class='typing-animation'></span>";
+        i--;
+      } else {
+        clearInterval(eraseInterval);
+        index = (index + 1) % phrases.length;
+        setTimeout(typePhrase, 1000);
+      }
+    }, 30);
+  }
+
+  typePhrase();
+</script>

@@ -1,0 +1,71 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export const prerender = true;
+export async function getStaticPaths() {
+  return [
+    {
+      params: { project: "astro" },
+      props: {
+        name: "AstroJS",
+        desc: "A modern static site generator for the JavaScript ecosystem.",
+        image: "/images/astro.png",
+        result: "95%",
+        github: "https://github.com/your-username/astro-repo",
+      },
+    },
+    {
+      params: { project: "java" },
+      props: {
+        name: "Java",
+        desc: "A high-level, class-based, object-oriented programming language.",
+        image: "/images/java.png",
+        result: "85%",
+        github: "https://github.com/your-username/java-repo",
+      },
+    },
+    {
+      params: { project: "python" },
+      props: {
+        name: "Python",
+        desc: "A high-level, interpreted programming language known for its readability.",
+        image: "/images/python.png",
+        result: "90%",
+        github: "https://github.com/your-username/python-repo",
+      },
+    },
+    {
+      params: { project: "c++" },
+      props: {
+        name: "C++",
+        desc: "A high-performance, compiled programming language with a large standard library.",
+        image: "/images/cplusplus.png",
+        result: "80%",
+        github: "https://github.com/your-username/cplusplus-repo",
+      },
+    },
+  ];
+}
+
+const { params, props } = Astro;
+
+const { name, desc, image, result, github } = props;
+---
+
+<MainLayout>
+  <section class="mx-auto max-w-lg text-center">
+    <img 
+      src={image}
+      width="300" 
+      height="300" 
+      class="rounded-full mx-auto mb-6" 
+      alt={name}
+    />
+    <h1 class="font-bold text-3xl mb-4">{name}</h1>
+    <p class="text-lg mb-4">{desc}</p>
+    <p class="text-xl font-bold mb-2">Result: {result}</p>
+    <a href={github} class="block w-full max-w-xs mx-auto bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 focus:outline-none">
+      View on GitHub
+    </a>
+  </section>
+</MainLayout>

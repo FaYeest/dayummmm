@@ -1,0 +1,64 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import styles from './About.module.css';
+---
+<MainLayout 
+    title="Farras About" 
+    seoTitle="About M. Tubagus Farrasandi, Software Engineer"
+    seoDesc={`Hello and welcome! I am Muhammad Tubagus Farrasandi, currently pursuing my Bachelor's degree in Informatics at Gunadarma University. I am passionate about exploring the dynamic world of technology and its endless possibilities. Throughout my academic journey, I have delved deep into various aspects of Informatics, from programming languages to database management, and from artificial intelligence to web development. Each subject has not only expanded my knowledge but has also fueled my curiosity to dive deeper into the realm of technology. Beyond academia, I am constantly seeking opportunities to apply my skills in real-world scenarios. Whether it's through internships, projects, or collaborations, I am driven by the desire to contribute meaningfully to the tech industry and make a positive impact on society. This website serves as a platform to showcase my projects, share my insights, and connect with like-minded individuals who share a passion for technology and innovation. Feel free to explore and reach out—I'm always excited to collaborate and learn from others. Thank you for visiting!`}
+>
+    <div class="container mx-auto py-8">
+        <h1 class="text-5xl font-bold mb-8">About Me</h1>
+        <div class="flex flex-col md:flex-row justify-center items-center">
+            <div class="md:w-1/2 md:mr-8">
+                <img src="/images/about.jpg" alt="About Image" class="w-full rounded-lg shadow-lg mb-4"/>
+            </div>
+            <div class="md:w-1/2">
+                <p class="text-lg mb-4">Hello and welcome! I am Muhammad Tubagus Farrasandi, currently pursuing my Bachelor's degree in Informatics at Gunadarma University. I am passionate about exploring the dynamic world of technology and its endless possibilities.</p>
+                <p class="text-lg mb-4">Throughout my academic journey, I have delved deep into various aspects of Informatics, from programming languages to database management, and from artificial intelligence to web development. Each subject has not only expanded my knowledge but has also fueled my curiosity to dive deeper into the realm of technology.</p>
+                <p class="text-lg mb-4">Beyond academia, I am constantly seeking opportunities to apply my skills in real-world scenarios. Whether it's through internships, projects, or collaborations, I am driven by the desire to contribute meaningfully to the tech industry and make a positive impact on society.</p>
+                <p class="text-lg mb-4">This website serves as a platform to showcase my projects, share my insights, and connect with like-minded individuals who share a passion for technology and innovation. Feel free to explore and reach out—I'm always excited to collaborate and learn from others.</p>
+                <p class="text-lg">Thank you for visiting!</p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center flex-wrap gap-6 mt-8">
+            <div class="flex items-center justify-center flex-wrap gap-6 mt-8">
+                <a href="https://www.instagram.com/takeafaye/" target="_blank" class="mr-4 flex items-center">
+                    <img src="/images/instagram.png" alt="instagram" class="w-8 h-8 mr-2"/>
+                    <span class="text-white whitespace-nowrap">Instagram</span>
+                </a>
+                <a href="https://discordapp.com/users/593059209290186772" target="_blank" class="mr-4 flex items-center">
+                    <img src="/images/discord.png" alt="facebook" class="w-8 h-8 mr-2"/>
+                    <span class="text-white whitespace-nowrap">Discord</span>
+                </a>
+                <a href="https://twitter.com/TakeAFaye" target="_blank" class="mr-4 flex items-center">
+                    <img src="/images/twitter.png" alt="twitter" class="w-8 h-8 mr-2"/>
+                    <span class="text-white whitespace-nowrap">Twitter</span>
+                </a>
+                <!-- buat disini kalo mau buat lebih banyak -->
+            </div>
+    </div>
+</MainLayout>
+
+<style>
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container p {
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Farras Projects"
+  seoTitle="My Projects with Python, Astro, Java"
+  seoDesc="My Awards winning projects with Python, Astro, and Java"
+>
+  <div class="w-8/12 lg:w-6/12 mx-auto">
+    <h1 class="text-5xl my-4 text-center">Projects</h1>
+    <div class="grid grid-cols-2 gap-4 justify-center">
+      <a href="/projects/astro" class="text-center project-link">
+        <img class="rounded w-48 h-48 mx-auto project-image" src="/images/astro.png" alt="Astro Project" />
+        <p class="mt-2 project-title">Astro Project</p>
+      </a>
+      <a href="/projects/java" class="text-center project-link">
+        <img class="rounded w-48 h-48 mx-auto project-image" src="/images/java.png" alt="Java Project" />
+        <p class="mt-2 project-title">Java Project</p>
+      </a>
+      <a href="/projects/python" class="text-center project-link">
+        <img class="rounded w-48 h-48 mx-auto project-image" src="/images/python.png" alt="Python Project" />
+        <p class="mt-2 project-title">Python Project</p>
+      </a>
+      <a href="/projects/c++" class="text-center project-link">
+        <img class="rounded w-48 h-48 mx-auto project-image" src="/images/c++.png" alt="C++ Project" />
+        <p class="mt-2 project-title">C++ Project</p>
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .project-link {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-link:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project-link:hover .project-image {
+    transform: scale(1.1);
+  }
+
+  .project-title {
+    transition: color 0.3s ease-in-out;
+  }
+
+  .project-link:hover .project-title {
+    color: #3182ce; /* Ganti warna teks saat hover */
+  }
+</style>
